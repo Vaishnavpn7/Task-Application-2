@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+
+        <table class="table table-info table-striped-columns">
+
+            <tr>
+                <th>Task name</th>
+                <th>User</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+
+
+            <tr *ngFor="let d of alltask ">
+                <td>{{d.task_name}}</td>
+                <td>{{d.user}}</td>
+                <td>{{d.date}}</td>
+                <td>{{d.status}}</td>
+                <td><button class="btn btn-danger" (click)="deletetask(d.id)">Delete</button></td>
+                <!-- <td>
+                    <a href="{%url 'task-detail' t.id%}">View</a>
+                    <a href="{%url 'task-delete' t.id%}">Delete</a>
+                </td> -->
+            </tr>
+
+
+
+
+        </table>
+
+
+    </div>
+    <div class="col-2"></div>
+</div>
